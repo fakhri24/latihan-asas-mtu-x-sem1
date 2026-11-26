@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="id" data-theme="light" data-studio-available="false" data-print-solutions="closed">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1d4ed8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Latihan Pemantapan ASAS Matematika Umum Kelas X</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-weight='700' font-size='24' fill='%23ffffff'%3EMTU%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="./src/styles/tokens.css" />
+    <link rel="stylesheet" href="./src/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+    ></script>
+    <script type="module" src="./src/main.js"></script>
+  </head>
+  <body>
+    <a href="#judul-utama" class="skip-link">Lewati ke konten utama</a>
+
+    <header class="app-header">
+      <div class="header-inner">
+        <div>
+          <p class="brand-kicker">Matematika Umum Kelas X · Semester 1 · Fase E</p>
+          <h1 id="judul-utama" class="header-title" tabindex="-1">
+            Latihan Pemantapan ASAS (40 Soal)
+          </h1>
+        </div>
+        <div class="header-actions">
+          <button type="button" class="btn" data-action="open-guide-modal">
+            Ringkasan &amp; Materi
+          </button>
+          <a
+            class="btn"
+            href="./assets/latihan-asas-mtu-x-sem1-soal.pdf"
+            target="_blank"
+            rel="noopener"
+            download="Latihan-ASAS-MTU-X-Sem1-Soal-50-50.pdf"
+            data-ref="link-pdf-soal"
+          >
+            Unduh PDF Soal (50:50)
+          </a>
+          <a
+            class="btn"
+            href="./assets/latihan-asas-mtu-x-sem1-pembahasan.pdf"
+            target="_blank"
+            rel="noopener"
+            download="Latihan-ASAS-MTU-X-Sem1-Pembahasan-50-50.pdf"
+            data-ref="link-pdf-pembahasan"
+          >
+            Unduh PDF + Pembahasan
+          </a>
+          <button
+            type="button"
+            class="btn"
+            data-action="toggle-theme"
+            data-ref="theme-toggle"
+            aria-pressed="false"
+          >
+            Mode Gelap
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="print-only-kop" aria-label="Kepala Naskah Cetak A4">
+      <div class="kop-header">
+        <div>
+          <p class="kop-school">SMA PESANTREN UNGGUL AL BAYAN PUTRI GOALPARA</p>
+          <h2 class="kop-title" data-ref="print-doc-title">
+            Latihan Pemantapan Pra-ASAS — Matematika Umum Kelas X Semester 1
+          </h2>
+          <p class="kop-meta">
+            Materi: Eksponen &amp; Akar · Logaritma · Relasi &amp; Fungsi · Persamaan Kuadrat | Waktu: 120 Menit
+          </p>
+        </div>
+        <div class="kop-score-box">NILAI</div>
+      </div>
+      <div class="kop-identity">
+        <span>Nama: ........................................................</span>
+        <span>Kelas: ..................</span>
+        <span>Tanggal: ......................</span>
+      </div>
+    </section>
+
+    <main id="app" class="app-main" data-ui="app-shell">
+      <div
+        class="alert-banner"
+        data-ref="alert-banner"
+        data-state="closed"
+        role="status"
+        aria-live="polite"
+      ></div>
+
+      <section class="panel-card" data-ref="student-guide-bar" data-state="closed" aria-label="Tips Strategi Latihan">
+        <p class="studio-note">
+          <strong>Tips Strategi ASAS:</strong> Coba <strong>Mode Simulasi Tryout (120 Menit)</strong> terlebih dahulu untuk melatih manajemen waktu dan mengecek bab yang masih lemah, lalu gunakan <strong>Mode Belajar</strong> untuk meninjau petunjuk dan pembahasan. Soal ASAS asli menggunakan angka dan variasi soal yang berbeda.
+        </p>
+      </section>
+
+      <section class="mode-bar" data-ref="mode-bar" data-state="open" aria-label="Mode Pengerjaan">
+        <div class="chip-row" role="group" aria-label="Pilih mode belajar atau simulasi">
+          <button
+            type="button"
+            class="btn"
+            data-action="set-mode"
+            data-mode="learn"
+            data-state="active"
+            aria-pressed="true"
+          >
+            Mode Belajar (Per Bab + Cek Langsung)
+          </button>
+          <button
+            type="button"
+            class="btn"
+            data-action="set-mode"
+            data-mode="sim"
+            data-state="inactive"
+            aria-pressed="false"
+          >
+            Mode Simulasi Tryout (120 Menit)
+          </button>
+        </div>
+      </section>
+
+      <section aria-labelledby="judul-ringkasan">
+        <h2 id="judul-ringkasan" class="visually-hidden">Ringkasan Progres Latihan</h2>
+        <div class="stats-grid">
+          <article class="stat-card">
+            <p class="stat-label">Total Soal</p>
+            <p class="stat-value" data-ref="stat-total">40</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Sudah Diisi</p>
+            <p class="stat-value" data-ref="stat-answered">0 / 40</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Sudah Dicek</p>
+            <p class="stat-value" data-ref="stat-checked">0</p>
+          </article>
+          <article class="stat-card">
+            <p class="stat-label">Skor Terkini</p>
+            <p class="stat-value" data-ref="stat-score">—</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel-card" data-ref="sim-panel" data-state="closed" aria-labelledby="judul-simulasi">
+        <div class="sim-top-row">
+          <div>
+            <h2 id="judul-simulasi" class="panel-heading">Simulasi Tryout ASAS (120 Menit)</h2>
+            <p class="sim-sub">
+              Jawab seluruh 40 soal tanpa pembahasan, lalu kumpulkan untuk melihat skor dan analisis per bab.
+            </p>
+          </div>
+          <div class="sim-clock-box">
+            <span class="stat-label">Sisa Waktu</span>
+            <p class="sim-clock" data-ref="sim-clock">02:00:00</p>
+          </div>
+        </div>
+        <div class="chip-row">
+          <button type="button" class="btn btn-primary" data-action="start-sim" data-state="open">
+            Mulai Simulasi 120 Menit
+          </button>
+          <button type="button" class="btn btn-primary" data-action="ask-submit-sim" data-state="closed">
+            Kumpulkan &amp; Nilai
+          </button>
+          <button type="button" class="btn btn-danger" data-action="reset-sim" data-state="closed">
+            Reset Simulasi
+          </button>
+          <a
+            class="btn"
+            href="./assets/latihan-asas-mtu-x-sem1-soal.pdf"
+            target="_blank"
+            rel="noopener"
+            download="Latihan-ASAS-MTU-X-Sem1-Soal-50-50.pdf"
+          >
+            Unduh PDF Soal (50:50)
+          </a>
+        </div>
+        <div class="sim-result-box" data-ref="sim-result-box" data-state="closed">
+          <div class="sim-score-head">
+            <div>
+              <p class="stat-label">Skor Akhir Simulasi</p>
+              <p class="sim-final-score" data-ref="sim-final-score">0 / 100</p>
+            </div>
+            <p class="sim-final-detail" data-ref="sim-final-detail"></p>
+          </div>
+          <div class="chip-row" data-ref="sim-chapter-breakdown"></div>
+        </div>
+        <div class="sim-nav-grid" data-ref="sim-nav-grid" role="group" aria-label="Navigasi cepat nomor 1 sampai 40"></div>
+      </section>
+
+      <section class="panel-card" data-ref="learn-filters" data-state="open" aria-labelledby="judul-filter">
+        <h2 id="judul-filter" class="visually-hidden">Filter Soal</h2>
+        <div class="filter-layout">
+          <div class="chip-row" role="group" aria-label="Filter bab materi">
+            <button type="button" class="btn" data-action="set-chapter" data-chapter="all" data-state="active" aria-pressed="true">
+              Semua Bab (40)
+            </button>
+            <button type="button" class="btn" data-action="set-chapter" data-chapter="bab1" data-state="inactive" aria-pressed="false">
+              Bab 1 Eksponen (10)
+            </button>
+            <button type="button" class="btn" data-action="set-chapter" data-chapter="bab4" data-state="inactive" aria-pressed="false">
+              Bab 4 Logaritma (10)
+            </button>
+            <button type="button" class="btn" data-action="set-chapter" data-chapter="bab7" data-state="inactive" aria-pressed="false">
+              Bab 7 Fungsi (10)
+            </button>
+            <button type="button" class="btn" data-action="set-chapter" data-chapter="bab5" data-state="inactive" aria-pressed="false">
+              Bab 5 PK (10)
+            </button>
+          </div>
+
+          <div class="filter-bar">
+            <search class="field-group filter-search">
+              <label for="cari-soal" class="field-label">Cari Nomor, Topik, atau Kata Kunci</label>
+              <input
+                id="cari-soal"
+                type="search"
+                class="input"
+                placeholder="Misal: logaritma, piecewise, diskriminan..."
+                data-action="search-input"
+                data-ref="search-input"
+              />
+            </search>
+            <div class="chip-row" role="group" aria-label="Filter status pengerjaan">
+              <button type="button" class="btn" data-action="set-status" data-status="all" data-state="active" aria-pressed="true">
+                Semua
+              </button>
+              <button type="button" class="btn" data-action="set-status" data-status="unanswered" data-state="inactive" aria-pressed="false">
+                Belum Diisi
+              </button>
+              <button type="button" class="btn" data-action="set-status" data-status="wrong" data-state="inactive" aria-pressed="false">
+                Perlu Ulang
+              </button>
+              <button type="button" class="btn" data-action="set-status" data-status="correct" data-state="inactive" aria-pressed="false">
+                Benar
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="judul-daftar-soal">
+        <h2 id="judul-daftar-soal" class="visually-hidden">Daftar Soal</h2>
+        <div class="question-list" data-ref="question-list" data-layout="single"></div>
+        <p class="empty-state" data-ref="empty-state" data-state="closed">
+          Tidak ada soal yang cocok dengan filter saat ini.
+        </p>
+      </section>
+
+      <template data-ref="tpl-sim-nav-btn">
+        <button type="button" class="sim-nav-btn" data-action="jump-question" data-qnum="" data-state="idle"></button>
+      </template>
+
+      <template data-ref="tpl-chapter-chip">
+        <span class="badge"></span>
+      </template>
+
+      <template data-ref="tpl-mirror-row">
+        <div class="mirror-row" data-ui="mirror-row">
+          <div class="mirror-col" data-ref="mirror-left"></div>
+          <div class="mirror-col" data-ref="mirror-right"></div>
+        </div>
+      </template>
+
+      <template data-ref="tpl-question-card">
+        <article class="question-card" data-ui="question-card" data-id="" data-tier="inti" data-state="idle">
+          <header class="q-card-header">
+            <div class="q-badges">
+              <span class="q-num-badge" data-ref="q-num">Soal #1</span>
+              <span class="badge" data-ref="q-chapter">Bab 1</span>
+              <span class="badge" data-ref="q-type">Pilihan Ganda</span>
+              <span class="badge tier-badge" data-ref="q-tier" data-state="closed" data-tier="inti"></span>
+              <span class="badge dataset-badge" data-ref="q-dataset-tag" data-state="closed"></span>
+            </div>
+            <p class="q-topic" data-ref="q-topic"></p>
+          </header>
+
+          <div class="stimulus-box" data-ref="q-stimulus" data-state="closed">
+            <p class="stimulus-title" data-ref="q-stim-title"></p>
+            <div class="stimulus-text" data-ref="q-stim-text"></div>
+          </div>
+
+          <div class="q-prompt" data-ref="q-prompt"></div>
+
+          <div class="q-input-mount" data-ref="q-input-mount"></div>
+
+          <div class="ruang-jawab" aria-hidden="true">
+            <span class="ruang-jawab-label">Coretan / Langkah Pengerjaan:</span>
+          </div>
+
+          <div class="q-card-actions">
+            <div class="chip-row">
+              <button type="button" class="btn" data-action="toggle-hint" data-state="open" aria-expanded="false">
+                Petunjuk
+              </button>
+              <button type="button" class="btn btn-primary" data-action="check-question" data-state="open">
+                Cek Jawaban
+              </button>
+            </div>
+            <span class="eval-badge" data-ref="q-check-badge" data-state="closed"></span>
+          </div>
+
+          <div class="hint-box" data-ref="q-hint-box" data-state="closed">
+            <p class="box-title">Petunjuk Konsep</p>
+            <div class="box-body" data-ref="q-hint-text"></div>
+          </div>
+
+          <div class="solution-box" data-ref="q-solution-box" data-state="closed">
+            <p class="box-title">Pembahasan Sistematis</p>
+            <div class="box-body" data-ref="q-solution-text"></div>
+          </div>
+        </article>
+      </template>
+
+      <template data-ref="tpl-choice-list">
+        <ul class="choice-list" role="list"></ul>
+      </template>
+
+      <template data-ref="tpl-choice-item">
+        <li class="choice-item">
+          <button type="button" class="choice-btn" data-action="pick-option" data-state="idle" aria-pressed="false">
+            <span class="opt-key" data-ref="opt-key">A</span>
+            <span class="opt-text" data-ref="opt-text"></span>
+          </button>
+        </li>
+      </template>
+
+      <template data-ref="tpl-mtf-list">
+        <div class="mtf-list" role="group" aria-label="Pernyataan Benar atau Salah"></div>
+      </template>
+
+      <template data-ref="tpl-mtf-row">
+        <div class="mtf-row" data-ui="mtf-row" data-state="idle">
+          <div class="mtf-stmt-wrap">
+            <span class="mtf-num" data-ref="mtf-num"></span>
+            <span class="mtf-text" data-ref="mtf-text"></span>
+          </div>
+          <div class="mtf-actions" role="group" aria-label="Pilihan Benar atau Salah">
+            <button type="button" class="btn mtf-btn" data-action="pick-mtf" data-bool="true" data-state="idle" aria-pressed="false">
+              Benar
+            </button>
+            <button type="button" class="btn mtf-btn" data-action="pick-mtf" data-bool="false" data-state="idle" aria-pressed="false">
+              Salah
+            </button>
+          </div>
+        </div>
+      </template>
+
+      <template data-ref="tpl-short-input">
+        <div class="short-box">
+          <label class="field-label" data-ref="short-label">Jawaban Bilangan Bulat</label>
+          <div class="short-input-row">
+            <input type="text" inputmode="numeric" class="input short-input" placeholder="Ketik angka bulat..." data-action="input-short" />
+            <span class="short-unit" data-ref="short-unit" data-state="closed"></span>
+          </div>
+          <p class="short-expected" data-ref="short-expected" data-state="closed"></p>
+        </div>
+      </template>
+
+      <template data-ref="tpl-formula-card">
+        <article class="formula-card" data-ui="formula-card">
+          <h3 class="formula-card-title" data-ref="formula-card-title"></h3>
+          <ul class="formula-list" data-ref="formula-list"></ul>
+        </article>
+      </template>
+
+      <template data-ref="tpl-formula-item">
+        <li class="formula-item">
+          <span class="formula-label" data-ref="formula-label"></span>
+          <div class="formula-math formula-lines" data-ref="formula-lines"></div>
+        </li>
+      </template>
+
+      <template data-ref="tpl-rumus-chip">
+        <div class="rumus-chip" data-ui="rumus-chip">
+          <p class="formula-label" data-ref="chip-label"></p>
+          <div class="formula-math formula-lines" data-ref="chip-lines"></div>
+        </div>
+      </template>
+
+      <template data-ref="tpl-materi-card">
+        <article class="materi-card" data-ui="materi-card">
+          <header class="materi-head">
+            <div class="materi-title-row">
+              <span class="badge" data-ref="materi-badge"></span>
+              <h3 class="materi-title" data-ref="materi-title"></h3>
+            </div>
+            <div class="materi-tagline" data-ref="materi-tagline"></div>
+          </header>
+          <section class="materi-section">
+            <h4 class="materi-subtitle">Rumus Inti</h4>
+            <div class="rumus-chip-grid kol2" data-ref="materi-chip-grid"></div>
+          </section>
+          <div class="materi-two-col">
+            <section class="materi-box">
+              <h4 class="materi-subtitle">Inti Konsep</h4>
+              <div class="box-body" data-ref="materi-key-points"></div>
+            </section>
+            <section class="materi-box">
+              <h4 class="materi-subtitle">Alur Cepat Pengerjaan</h4>
+              <div class="box-body" data-ref="materi-quick-flow"></div>
+            </section>
+          </div>
+          <section class="materi-section">
+            <h4 class="materi-subtitle">Contoh Mini Sistematis</h4>
+            <div class="materi-examples" data-ref="materi-examples"></div>
+          </section>
+          <section class="materi-pitfall">
+            <h4 class="materi-subtitle">Awas Keliru!</h4>
+            <div class="box-body" data-ref="materi-pitfalls"></div>
+          </section>
+        </article>
+      </template>
+
+      <template data-ref="tpl-materi-example">
+        <div class="materi-example">
+          <p class="materi-ex-title" data-ref="ex-title"></p>
+          <div class="box-body" data-ref="ex-problem"></div>
+          <div class="box-body materi-ex-steps" data-ref="ex-steps"></div>
+        </div>
+      </template>
+
+      <dialog class="modal-dialog" data-ref="confirm-dialog" aria-labelledby="judul-konfirmasi">
+        <div class="modal-header">
+          <h2 id="judul-konfirmasi" class="panel-heading">Kumpulkan Simulasi Tryout?</h2>
+        </div>
+        <p>Setelah dikumpulkan, nilai akhir dihitung otomatis dan pembahasan tiap soal dapat ditinjau.</p>
+        <form method="dialog" class="modal-actions">
+          <button type="submit" class="btn" value="cancel">Lanjutkan Mengerjakan</button>
+          <button type="submit" class="btn btn-primary" value="confirm">Ya, Kumpulkan</button>
+        </form>
+      </dialog>
+
+      <dialog class="modal-dialog modal-wide" data-ref="guide-dialog" closedby="any" aria-labelledby="judul-rumus">
+        <div class="modal-header">
+          <h2 id="judul-rumus" class="panel-heading">Ringkasan Rumus &amp; Materi ASAS Semester 1</h2>
+          <form method="dialog">
+            <button type="submit" class="btn" value="close">Tutup</button>
+          </form>
+        </div>
+        <div class="guide-toolbar">
+          <div class="chip-row" role="tablist" aria-label="Pilih tampilan ringkasan">
+            <button
+              id="tab-guide-rumus"
+              type="button"
+              class="btn"
+              role="tab"
+              data-action="switch-guide-tab"
+              data-tab="rumus"
+              data-state="active"
+              aria-selected="true"
+              aria-controls="panel-guide-rumus"
+            >
+              Lembar Rumus (1 Hal A4)
+            </button>
+            <button
+              id="tab-guide-materi"
+              type="button"
+              class="btn"
+              role="tab"
+              data-action="switch-guide-tab"
+              data-tab="materi"
+              data-state="inactive"
+              aria-selected="false"
+              aria-controls="panel-guide-materi"
+            >
+              Rangkuman Materi (4 Bab)
+            </button>
+          </div>
+          <div class="chip-row">
+            <a
+              class="btn"
+              href="./assets/ringkasan-rumus-asas-mtu-x-sem1.pdf"
+              target="_blank"
+              rel="noopener"
+              download="Ringkasan-Rumus-ASAS-MTU-X-Sem1-A4.pdf"
+              data-ref="link-pdf-rumus"
+            >
+              Unduh PDF Rumus (A4)
+            </a>
+            <a
+              class="btn btn-primary"
+              href="./assets/rangkuman-materi-asas-mtu-x-sem1.pdf"
+              target="_blank"
+              rel="noopener"
+              download="Rangkuman-Materi-ASAS-MTU-X-Sem1-A4.pdf"
+              data-ref="link-pdf-materi"
+            >
+              Unduh PDF Materi (4 Hal A4)
+            </a>
+          </div>
+        </div>
+        <div
+          id="panel-guide-rumus"
+          class="guide-panel"
+          role="tabpanel"
+          aria-labelledby="tab-guide-rumus"
+          data-ref="guide-rumus-panel"
+          data-state="open"
+        >
+          <div class="formula-sheet-grid" data-ref="guide-rumus-mount"></div>
+        </div>
+        <div
+          id="panel-guide-materi"
+          class="guide-panel"
+          role="tabpanel"
+          aria-labelledby="tab-guide-materi"
+          data-ref="guide-materi-panel"
+          data-state="closed"
+        >
+          <div class="materi-sheet-list" data-ref="guide-materi-mount"></div>
+        </div>
+      </dialog>
+    </main>
+
+    <footer class="app-footer">
+      <p>
+        Portal Pemantapan ASAS Matematika Umum Kelas X · Vanilla JS Murni · Zero-Cache Policy.
+      </p>
+    </footer>
+  </body>
+</html>
